@@ -1,0 +1,29 @@
+{
+  "name": "chrome-extension-starter-kit",
+  "version": "0.0.1",
+  "description": "A chrome extension starter kit for typescript (no webpack)",
+  "main": "src/popup.html",
+  "scripts": {
+    "prebuild": " rimraf build/*",
+    "build": "tsc",
+    "postbuild": "npm-run-all make-images --parallel copy-images copy-manifest copy-html",
+    "make-images": "mkdir ./build/images",
+    "copy-images": "cp ./src/images/* ./build/images/",
+    "copy-manifest": "cp ./src/manifest.json ./build/manifest.json",
+    "copy-html": "cp ./src/options/*.html ./build/options; cp ./src/popup/*.html ./build/popup; cp ./src/*.html ./build",
+    "test": "echo sorry no tests ",
+    "learn": "cp ./src/images/* ./build/images/"
+  },
+  "author": "Tod Gentille",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/chrome": "0.0.83",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.5",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body style="width:250px">
+  <div class="container">
+    <div class="row p-2">
+      <nav class="navbar-brand navbar-light  mb-0 ">
+        <span class="navbar-brand ">
+          <img src="../images/icon-48.png" />
+          Starter Kit
+        </span>
+        <span id="navProgress" class="d-none spinner-border text-primary" role="status">
+          <span class="sr-only">Retrieving data...</span>
+        </span>
+    </div>
+  </div>
+  </nav>
+
+  <div class="p-2">
+    <button id="clickMe" class="btn btn-block btn-primary text-center">
+      Click Me
+    </button>
+  </div>
+
+  <div id="optionDisplay" class="p-2"></div>
+
+
+  <div id="response" class="d-none p-2 m-2 alert-success"> </div>
+
+  </div>
+  <script type="module" src="../shared.js"></script>
+  <script type="module" src="./popup.js"></script>
+</body>
+
+</html>

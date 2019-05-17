@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome Extension Starter Kit",
+  "version": "0.0.1",
+  "description": "Chrome Extension starter kit for TypeScript (no webpack required)",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "declarativeContent",
+    "storage",
+    "https://www.pluralsight.com/*"
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.pluralsight.com/*"],
+      "js": ["content-scripts/sampleContentScript.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "images/icon-48.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "48": "images/icon-48.png"
+  }
+}
